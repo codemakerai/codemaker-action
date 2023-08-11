@@ -1,0 +1,21 @@
+# action.yml
+name: 'CodeMaker'
+description: 'Run CodeMaker code generation'
+inputs:
+  api-key:
+    description: 'CodeMaker api key'
+    required: true
+  mode:
+    description: 'Code generation mode. Currently we support code, docs or unit-tests'
+    required: true
+    default: 'code'
+  path:
+    description: 'Path of the file to process'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.api-key }}
+    - ${{ inputs.mode }}
+    - ${{ inputs.path }}
