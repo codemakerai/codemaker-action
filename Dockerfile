@@ -8,7 +8,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/codemakerai/codemaker-cli/releases/download/v0.0.12/linux-amd64.zip -P /usr/local/bin/codemaker-cli \
-  && uzip /usr/local/bin/codemaker-cli/linux-amd64.zip \
+  && unzip /usr/local/bin/codemaker-cli/linux-amd64.zip \
   && export PATH=$PATH:/usr/local/bin/codemaker-cli/linux-amd64/bin
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
