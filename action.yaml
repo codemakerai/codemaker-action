@@ -1,6 +1,6 @@
 # action.yml
-name: 'CodeMaker'
-description: 'Run CodeMaker code generation'
+name: 'CodeMaker Action'
+description: 'Integrate CodeMaker directly into Github CI/CD workflow'
 inputs:
   api-key:
     description: 'CodeMaker api key'
