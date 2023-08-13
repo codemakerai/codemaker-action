@@ -1,4 +1,4 @@
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
   codemakerai_generation_job:
@@ -13,7 +13,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: generate
         with:
-          api_key: TODO
+          api_key: ${{ secrets.CODEMAKERAI_API_KEY }}
           modd: code
           path: ./example.java
       - name: Create Pull Request
