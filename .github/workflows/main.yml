@@ -14,7 +14,7 @@ jobs:
         id: generate
         with:
           api_key: ${{ secrets.CODEMAKERAI_API_KEY }}
-          modd: code
+          mode: code
           path: ./example.java
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5.0.2
