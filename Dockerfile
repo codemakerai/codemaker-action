@@ -1,9 +1,11 @@
 # Container image that runs your code
 FROM ubuntu
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-  && apt-get install -y wget \
-  && apt-get install -y uzip
+RUN apt-get update \
+  && apt-get -y autoremove \
+  && apt-get clean \
+  && apt-get install -y wget zip unzip \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/codemakerai/codemaker-cli/releases/download/v0.0.12/linux-amd64.zip -P /usr/local/bin/codemaker-cli \
   && uzip /usr/local/bin/codemaker-cli/linux-amd64.zip \
