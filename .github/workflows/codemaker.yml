@@ -13,7 +13,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: generate
         with:
-          api-key: ${{ secrets.CODEMAKERAI_API_KEY }}
+          api-key: ${{ secrets.CODEMAKER_API_KEY }}
           mode: code
           path: ./example.java
       - name: Create Pull Request
