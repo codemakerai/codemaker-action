@@ -1,3 +1,5 @@
+#!/bin/sh -l
+
 api_key=$1
 mode=$2
 path=$3
