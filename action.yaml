@@ -9,7 +9,7 @@ inputs:
     description: 'Code generation mode. Currently we support code, docs or unit-tests'
     required: true
     default: 'code'
-  path:  
+  path:
     description: 'Path of the file to process'
     required: true
 runs:
