@@ -28,8 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to run codemakerai code generation
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
       - name: Code generation
